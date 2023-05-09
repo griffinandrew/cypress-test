@@ -15,9 +15,9 @@ jobs:
         run: npm install
 
       - name: Run Cypress tests
-        uses: cypress-io/github-action@v2
+        uses: cypress-io/github-action@v5
         with:
-          start: npm start
-          wait-on: 'http://localhost:3000'
+          start: npm start server
+          wait-on: 'http://localhost:8080'
           spec: cypress/integration/test.spec.js
 
